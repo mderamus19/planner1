@@ -22,27 +22,5 @@ class Building:
     def purchase(self, owner):
         self.owner = owner
 
-
-# creating instances of building
-# print(datetime.datetime.now().strftime("%x"))
-Smithsonian = Building("Washington DC", 4)
-Smithsonian.constructor()
-Smithsonian.purchase("Fred")
-Parthenon = Building("Tennessee", 3)
-Parthenon.purchase("John")
-Parthenon.constructor()
-Belle_Meade = Building("Tennessee", 2)
-Belle_Meade.purchase("Geraldine")
-Belle_Meade.constructor()
-Taj_Mahal = Building("India", 4)
-Taj_Mahal.purchase("Ghandi")
-Taj_Mahal.constructor()
-Colosseum = Building("Rome", 2)
-Colosseum.purchase("Hannah")
-Colosseum.constructor()
-new_building = Building("Alabama State Capital", 2)
-new_building.constructor()
-print(f'{new_building.address} was purchased by {new_building.designer} on {new_building.date_constructed} and has {new_building.stories} stories.')
-# print(new_building.constructor)
-
-
+    def __str__(self):
+        return (f"{self.address} was purchased by {self.designer} on {self.date_constructed} and has {self.stories} stories.")
